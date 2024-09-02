@@ -57,14 +57,16 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen items-center justify-between p-4 bg-white">
       <div>This is where the Image will go</div>
-      <div>This is where the temperature will go</div>
-      <div className="text-center flex flex-col w-full">
-        <div className="flex flex-row justify-center items-center gap-2">
-          <div className="text-2xl font-semibold">CLOUDY</div>
-          <div className="text-sm">-&gt; 1 mph</div>
-        </div>
-        <div className="flex items-center justify-center text-sm opacity-50">
-          humidity: 50% | percipitation: 0%
+      <div className="">
+        <div>This is where the temperature will go</div>
+        <div className="text-center flex flex-col w-full">
+          <div className="flex flex-row justify-center items-center gap-2">
+            <div className="text-2xl font-semibold">CLOUDY</div>
+            <div className="text-sm">-&gt; 1 mph</div>
+          </div>
+          <div className="flex items-center justify-center text-sm opacity-50">
+            humidity: 50% | percipitation: 0%
+          </div>
         </div>
       </div>
       <div className="flex flex-row justify-start items-center py-4 gap-4 w-full overflow-x-auto scrollbar-hidden">

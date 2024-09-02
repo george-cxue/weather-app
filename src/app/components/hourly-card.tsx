@@ -1,3 +1,5 @@
+import { Cloud, CircleOutline } from "@carbon/icons-react";
+
 export default function HourlyCard({
   time,
   icon,
@@ -9,9 +11,11 @@ export default function HourlyCard({
 }) {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div>{time}</div>
-      <div>{icon}</div>
-      <div>{temperature}</div>
+      <div className="text-sm">{time}</div>
+      <div className="py-2 text-3xl text-black">
+        {icon === "cloud" ? <Cloud size={24} /> : <CircleOutline size={24} />}
+      </div>
+      <div className="text-sm">{temperature}</div>
     </div>
   );
 }
