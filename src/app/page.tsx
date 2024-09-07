@@ -63,20 +63,20 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen items-center justify-between p-4 bg-white">
-      <div className="flex justify-between">
-        <div className="flex items-center">
+      <div className="flex justify-between w-full">
+        <div className="flex items-center gap-1">
           <p>9:23</p>
           <LocationCurrent />
         </div>
-        <div>Bar</div>
-        <div className="flex justify-between items-center">
-          <SignalStrength />
-          <Wifi />
-          <BatteryHalf />
+        <div className="rounded-full bg-black px-2">_____________</div>
+        <div className="flex justify-between items-center gap-1">
+          <SignalStrength size={20} />
+          <Wifi size={20} />
+          <BatteryHalf size={20} />
         </div>
       </div>
       <div>
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center items-center">
           <Image
             src="/weather.jpeg"
             alt="sun & clouds"
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-start items-center py-4 gap-4 w-full overflow-x-auto scrollbar-hidden">
+      <div className="flex flex-row justify-start sm:justify-center items-center py-4 gap-4 w-full overflow-x-auto scrollbar-hidden">
         {hourlyForcast.map((hour) => (
           <HourlyCard
             key={hour.time}
