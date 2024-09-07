@@ -1,5 +1,12 @@
 import Image from "next/image";
 import HourlyCard from "./components/hourly-card";
+import {
+  BatteryHalf,
+  Wifi,
+  SignalStrength,
+  LocationCurrent,
+} from "@carbon/icons-react";
+
 export default function Home() {
   const hourlyForcast = [
     {
@@ -56,9 +63,27 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen items-center justify-between p-4 bg-white">
-      <div>This is where the Image will go</div>
-      <div className="">
-        <div>This is where the temperature will go</div>
+      <div className="flex justify-between">
+        <div className="flex items-center">
+          <p>9:23</p>
+          <LocationCurrent />
+        </div>
+        <div>Bar</div>
+        <div className="flex justify-between items-center">
+          <SignalStrength />
+          <Wifi />
+          <BatteryHalf />
+        </div>
+      </div>
+      <div>
+        <div className="flex items-center justify-center">
+          <Image
+            src="/weather.jpeg"
+            alt="sun & clouds"
+            height={400}
+            width={400}
+          />
+        </div>
         <div className="text-center flex flex-col w-full">
           <div className="flex flex-row justify-center items-center gap-2">
             <div className="text-2xl font-semibold">CLOUDY</div>
