@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import HourlyCard from "./components/hourly-card";
 import {
   BatteryHalf,
@@ -77,12 +78,14 @@ export default function Home() {
       </div>
       <div>
         <div className="flex justify-center items-center">
-          <Image
-            src="/weather.jpeg"
-            alt="sun & clouds"
-            height={400}
-            width={400}
-          />
+          <Link href="https://weather.com/">
+            <Image
+              src="/weather.jpeg"
+              alt="sun & clouds"
+              height={400}
+              width={400}
+            />
+          </Link>
         </div>
         <div className="text-center flex flex-col w-full">
           <div className="flex flex-row justify-center items-center gap-2">
@@ -91,6 +94,9 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center text-sm opacity-50">
             humidity: 50% | percipitation: 0%
+          </div>
+          <div className="flex items-center justify-center text-sm opacity-50">
+            Philadelphia, PA
           </div>
         </div>
       </div>
